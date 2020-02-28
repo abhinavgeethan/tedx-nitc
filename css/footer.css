@@ -1,0 +1,78 @@
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #161616;
+	height: 300px;
+	color: #FFFFFF;
+	font-size: 0.9rem;
+}
+
+footer .logo-footer {
+	background: #00000000 url("../assets/white_logo.svg") no-repeat center;
+	background-size: contain;
+	width: 150px;
+	height: 50px;
+}
+
+footer .left-part .address {
+	font-size: 0.8rem;
+}
+
+footer .right-part .social-icons {
+	display: flex;
+	margin: 10px 0;
+}
+
+footer .right-part .social-icons .icon {
+	display: block;
+	height: 40px;
+	width: 40px;
+	padding: 8px;
+	margin-right: 5px;
+	background-color: #161616;
+	border-radius: 20px;
+	transition: filter 300ms ease-in-out;
+}
+footer .right-part .social-icons .icon .icon-image {
+	height: 100%;
+	width: 100%;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+footer .right-part .social-icons .icon:hover {
+	filter: invert(1);
+}
+
+footer .link {
+	padding: 2px 10px;
+	border-radius: 20px;
+	background-color: #161616;
+	color: #FFFFFF;
+	transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
+}
+
+footer .right-part .head {
+	padding-left: 10px;
+}
+
+footer .link:hover {
+	background-color: #FFFFFF;
+	color: #000000;
+}
+
+.extra-footer {
+	background-color: #161616;
+	color: #AAAAAA;
+	text-align: center;
+	padding-bottom: 15px;
+}
+
+@media screen and (min-width: 900px) {
+	footer {
+		flex-direction: row;
+	}
+}
