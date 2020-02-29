@@ -1,0 +1,36 @@
+.countdown {}
+
+.countdown .timer-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.countdown .timer-group {}
+
+.countdown .timer-group .timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+  height: 180px;
+  border: 5px solid #E62B1E;
+  margin: 10px 40px;
+}
+.countdown .timer-group .timer .value {
+  font-weight: 700;
+  font-size: 4em;
+  color: #E62B1E;
+  -webkit-text-stroke: 1px black;
+  text-shadow:
+      3px 3px 0 #FFFFFF,
+    -1px -1px 0 #FFFFFF,  
+     1px -1px 0 #FFFFFF,
+     -1px 1px 0 #FFFFFF,
+      1px 1px 0 #FFFFFF;
+}
+.countdown .timer-group .timer .label {
+  font-weight: 700;
+}
+
