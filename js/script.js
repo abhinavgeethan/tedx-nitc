@@ -47,7 +47,7 @@ document.addEventListener("scroll", e => {
     isScrolled = true;
     document.querySelector("main").style.marginTop = "90px";
     headerElem.style.transform = "translateY(0px)";
-    headerElem.style.backgroundColor = "#161616";
+    headerElem.style.backgroundColor = "#090909";
     headerElem.style.position = "fixed";
   }
 });

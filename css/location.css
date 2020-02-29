@@ -1,0 +1,42 @@
+.location {}
+
+.location .info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.location .info-container .info {
+  display: flex;
+  background-color: #090909;
+  min-width: 280px;
+  height: 120px;
+  margin: 20px 20px;
+  line-height: 1.8em;
+}
+
+.location .info-container .info .left-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.location .info-container .info .left-part svg {
+  fill: #E62B1E;
+}
+
+.location .info-container .info .right-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.location .info-container .info .right-part .label {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.location .info-container .info .right-part .value {
+  color: #AAAAAA;
+}

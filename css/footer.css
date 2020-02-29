@@ -3,7 +3,7 @@ footer {
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	background-color: #161616;
+	background-color: #090909;
 	height: 300px;
 	color: #FFFFFF;
 	font-size: 0.9rem;
@@ -17,7 +17,7 @@ footer .logo-footer {
 }
 
 footer .left-part .address {
-	font-size: 0.8rem;
+	font-size: 0.9rem;
 }
 
 footer .right-part .social-icons {
@@ -31,7 +31,7 @@ footer .right-part .social-icons .icon {
 	width: 40px;
 	padding: 8px;
 	margin-right: 5px;
-	background-color: #161616;
+	background-color: #090909;
 	border-radius: 20px;
 	transition: filter 300ms ease-in-out;
 }
@@ -50,7 +50,7 @@ footer .right-part .social-icons .icon:hover {
 footer .link {
 	padding: 2px 10px;
 	border-radius: 20px;
-	background-color: #161616;
+	background-color: #090909;
 	color: #FFFFFF;
 	transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
 }
@@ -65,7 +65,7 @@ footer .link:hover {
 }
 
 .extra-footer {
-	background-color: #161616;
+	background-color: #090909;
 	color: #AAAAAA;
 	text-align: center;
 	padding-bottom: 15px;
