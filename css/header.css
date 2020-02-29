@@ -1,5 +1,5 @@
 header {
-  position: relative;  
+  position: absolute;  
   z-index: 20;
   width: 100%;
   top: 0;

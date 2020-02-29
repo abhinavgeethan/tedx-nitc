@@ -12,8 +12,8 @@ footer {
 footer .logo-footer {
 	background: #00000000 url("../assets/white_logo.svg") no-repeat center;
 	background-size: contain;
-	width: 150px;
-	height: 50px;
+	width: 250px;
+	height: 150px;
 }
 
 footer .left-part .address {
@@ -68,7 +68,7 @@ footer .link:hover {
 	background-color: #090909;
 	color: #AAAAAA;
 	text-align: center;
-	padding-bottom: 15px;
+	padding: 15px 0;
 }
 
 @media screen and (min-width: 900px) {
