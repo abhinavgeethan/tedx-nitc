@@ -21,13 +21,14 @@ main {
 }
 
 section {
+  margin-bottom: 120px;
   padding: 50px 10%;
   max-width: 100vw;
 }
 
-section h2 {
+section .sub-heading {
   padding: 10px 0 50px 0;
-  font-size: 2.5em;
+  font-size: 2.5rem;
   font-weight: 400;
 }
 

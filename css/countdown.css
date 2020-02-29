@@ -20,7 +20,7 @@
 }
 .countdown .timer-group .timer .value {
   font-weight: 700;
-  font-size: 4em;
+  font-size: 4rem;
   color: #E62B1E;
   -webkit-text-stroke: 1px black;
   text-shadow:
