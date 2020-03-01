@@ -6,14 +6,95 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #000000;
   color: #FFFFFF;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.loading {
+  height: 100vh;
+  width: 100vw;
+  background-color: #FFFFFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: opacity 500ms ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading .ball {
+  position: absolute;
+  z-index: 101;
+  height: 100vh;
+  width: 100vh;
+  transform: scale(0.0000009);
+  transition: transform 500ms ease-in-out;
+  border-radius: 20000px;
+  background-color: #000000;
+}
+
+.loading .stroker-svg {
+  position: absolute;
+  z-index: 102;
+}
+
+.loading .stroker {
+  stroke-dasharray: 3303 3305;
+  stroke-dashoffset: 3304;
+  animation: JINUXwCX_draw_0 700ms ease-in-out 0ms infinite,
+    JINUXwCX_fade 700ms linear 0ms infinite;
+  transition: fill 500ms ease-in-out, stroke-dashoffset 500ms ease-in-out;
+  fill: #00000000;
+}
+
+@keyframes JINUXwCX_draw {
+  100%{
+    stroke-dashoffset:0;
+  }
+}
+
+@keyframes JINUXwCX_fade {
+  0%{
+    stroke-opacity:1;
+  }
+  
+  88.23529411764706%{
+    stroke-opacity:1;
+  }
+  100%{
+    stroke-opacity:0;
+  }
+}
+
+@keyframes JINUXwCX_draw_0 {
+  0%{
+    stroke-dashoffset: 3304
+  }
+  
+  58.82352941176471%{
+    stroke-dashoffset: 0;
+  }
+  100%{
+    stroke-dashoffset: 0;
+  }
 }
 
 .make-red {
   color: #E62B1E;
+}
+
+.make-bold {
+  font-weight: 700;
 }
 
 main {
@@ -33,6 +114,37 @@ section {
 section .sub-heading {
   padding: 10px 0 50px 0;
   font-size: 2.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+section .sub-heading.sensitive {
+  text-transform: none;
+}
+
+section .extra-section {
+  margin-bottom: 100px;
+  line-height: 2.4rem;
+  letter-spacing: 0.02rem;
+  word-spacing: 0.08rem;;
+  font-size: 1.13rem;
+}
+
+section .extra-section:not(:first-of-type)::before {
+  display: block;
+  position: relative;
+  content: '';
+  height: 5px;
+  max-width: 300px;
+  width: 40%;
+  top: -40px;
+  margin-bottom: 80px;
+  background-color: #E62B1E;
+}
+
+section .sub.sub-heading {
+  padding: 10px 0 50px 0;
+  font-size: 2.2rem;
   font-weight: 400;
 }
 

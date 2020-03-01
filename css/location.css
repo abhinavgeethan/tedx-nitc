@@ -12,7 +12,16 @@
   min-width: 280px;
   height: 120px;
   margin: 20px 20px;
-  line-height: 1.8em;
+  line-height: 1.8rem;
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.location .info-container .info:hover {
+  background-color: #E62B1E;
+  color: #000000;
 }
 
 .location .info-container .info .left-part {
@@ -24,6 +33,11 @@
 
 .location .info-container .info .left-part svg {
   fill: #E62B1E;
+  transition: color 300ms ease-in-out;
+}
+
+.location .info-container .info:hover .left-part svg {
+  fill: #FFFFFF;
 }
 
 .location .info-container .info .right-part {
@@ -38,5 +52,9 @@
 }
 
 .location .info-container .info .right-part .value {
-  color: #AAAAAA;
+  color: #999999;
+  transition: color 300ms ease-in-out;
+}
+.location .info-container .info:hover .right-part .value {
+  color: #222222;
 }

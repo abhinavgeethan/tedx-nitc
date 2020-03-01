@@ -58,3 +58,33 @@ function hideNav() {
     navElem.classList.remove("active");
   }, 300);
 }
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    let loadingElem = document.querySelector(".loading");
+
+    let ball = loadingElem.querySelector(".ball");
+
+    let stroker = loadingElem.querySelector(".stroker");
+
+    stroker.style.animation = "none";
+    stroker.style.strokeDashoffset = 0;
+    ball.style.transform = "scale(3)";
+    
+    setTimeout(() => {
+      stroker.style.fill = "#E60000";
+      
+      setTimeout(() => {
+        document.body.style.overflowY = "auto";
+        loadingElem.style.opacity = 0;
+          
+          setTimeout(() => {
+            loadingElem.style.display = "none";
+          }, 500);
+
+      }, 700);
+    }, 700);
+
+  }, 700);
+
+});

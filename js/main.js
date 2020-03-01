@@ -38,20 +38,25 @@ let goDowmElem = document.querySelector(" section.main .go-down");
 let animationRunning = true;
 document.addEventListener("scroll", () => {
   let offset = window.pageYOffset;
+  let fixedScrollValue = 250;
    
-  if (offset > 120 && animationRunning) {
+  if (offset > fixedScrollValue && animationRunning) {
     goDowmElem.style.opacity = 0;
     goDowmElem.style.animation = "none";
     animationRunning = false;
-  } else if(!animationRunning) {
+  } else if(offset <= fixedScrollValue && !animationRunning) {
     goDowmElem.style.opacity = 1;
+    animationRunning = true;
     sleep(500);
     goDowmElem.style.animation = "";
-    animationRunning = true;
   }
 })
 
-assignAnimation();
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    assignAnimation();
+  }, 2600);
+})
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -60,9 +65,9 @@ function sleep(ms) {
 async function assignAnimation() {
   for(let j = 0; ; j++) {
     let bannerText = bannerTexts[j%bannerTexts.length];
-    let animationDuration ="5000";
+    let animationDuration ="3000";
     if (j%bannerTexts.length == bannerTexts.length -1) {
-      animationDuration = "8000";
+      animationDuration = "5000";
     }
     let currentElem = e("DIV", "", "text", sequenceAnimationElem);
     for (let i =0; i< bannerText.name.length; i++) {
