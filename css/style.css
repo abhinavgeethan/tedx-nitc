@@ -101,6 +101,10 @@ body {
   font-weight: 700;
 }
 
+.make-small {
+  font-size: 1.3rem;
+}
+
 main {
   min-height: 500px;
 }
@@ -166,6 +170,10 @@ section .sub.sub-heading {
   padding: 10px 0 50px 0;
   font-size: 2.2rem;
   font-weight: 400;
+}
+
+section .extra-section p:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 900px) {

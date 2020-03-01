@@ -72,7 +72,7 @@ window.addEventListener("load", () => {
     ball.style.transform = "scale(3)";
     
     setTimeout(() => {
-      stroker.style.fill = "#E60000";
+      stroker.style.fill = "#E62B1E";
       
       setTimeout(() => {
         document.body.style.overflowY = "auto";
