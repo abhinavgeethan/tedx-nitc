@@ -1,0 +1,66 @@
+section.contact-section .extra-data {
+  margin-bottom: 80px;
+}
+
+section.contact-section .contact-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+section.contact-section .contact-list .contact {
+  display: flex;
+  background-color: #090909;
+  min-width: 300px;
+  width: 95vw;
+  max-width: 500px;
+  margin: 25px 0;
+  padding: 20px 0;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+section.contact-section .contact-list .contact:hover {
+  background-color: #E62B1E;
+  color: #000000;
+}
+
+section.contact-section .contact-list .contact .picture {
+  padding: 0 40px 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+section.contact-section .contact-list .contact .picture svg {
+  fill: #E62B1E;
+  transition: fill 300ms ease-in-out;
+}
+
+section.contact-section .contact-list .contact:hover .picture svg {
+  fill: #FFFFFF;
+}
+
+section.contact-section .contact-list .contact .data .name {
+  font-size: 1.5em;
+}
+
+section.contact-section .contact-list .contact .data .position {
+  color: #999999;
+  margin-bottom: 20px;
+  transition: color 300ms ease-in-out;
+}
+
+section.contact-section .contact-list .contact:hover .data .position {
+  color: #222222;
+}
+
+@media only screen and (min-width: 900px) {
+  section.contact-section {
+    margin-top: 160px;
+  }
+  
+  section.contact-section .extra-data {
+    margin-bottom: 100px;
+  }
+}

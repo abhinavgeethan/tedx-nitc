@@ -99,6 +99,7 @@ header nav.active .item {
 header nav .item {
   padding: 10px 10px;
   text-decoration: none;
+  color: inherit;
   cursor: pointer;
   transition: color 300ms ease-in-out;
 }
