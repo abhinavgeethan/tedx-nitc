@@ -89,6 +89,10 @@ body {
   }
 }
 
+.theme-link {
+  color: #E62B1E;
+}
+
 .make-red {
   color: #E62B1E;
 }
@@ -125,8 +129,10 @@ section .sub-heading.sensitive {
 section.imaged-heading .sub-heading:not(.sub) {
   width: 100vw;
   margin-left: -20px;
-  margin-top: -80px;
-  background: transparent url('https://cdn.glitch.com/1db8d091-7a7f-4d80-a4fe-2ae6168bd7a9%2FTED-talk-2016.jpg?v=1583065288448') no-repeat center;
+  margin-top: -150px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   padding-top: 250px;
   padding-bottom: 80px;
@@ -170,6 +176,6 @@ section .sub.sub-heading {
   section.imaged-heading .sub-heading:not(.sub) {
     margin-left: calc(-60px - 10vw);
     padding-left: calc(60px + 10vw);
-    margin-top: -140px;
+    margin-top: -150px;
   }
 }

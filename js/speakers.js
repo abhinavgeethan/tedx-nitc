@@ -85,15 +85,15 @@ function makeModal(cardData) {
 let speakerData = [
   {
     image_url: "https://cdn.glitch.com/1db8d091-7a7f-4d80-a4fe-2ae6168bd7a9%2F2.jpg?v=1583061219652",
-    description: "Anjali Menon is a poet, film and theatre critic, playwright, content strategist, and a food and travel blogger. She completed her master's degree in English Literature from Christ University, Bangalore. She has more than 200 poems published across multiple channels. She is currently a content writer working with LinkedIn and is the founder of a community-based organization called â€˜Have a Word' that features poets and musicians.",
+    description: "Anjali Menon is a poet, film and theatre critic, playwright, content strategist, and a food and travel blogger. She completed her master's degree in English Literature from Christ University, Bangalore. She has more than 200 poems published across multiple channels. She is currently a content writer working with LinkedIn and is the founder of a community-based organization called 'Have a Word' that features poets and musicians.",
     name: "Anjali Menon",
     sub_heading: "Poet, Film and Theatre critic",
     meta: []
   },
   {
     image_url: "https://cdn.glitch.com/1db8d091-7a7f-4d80-a4fe-2ae6168bd7a9%2F7.jpg?v=1583061219244",
-    description: "Kana M. Sureshan received PhD degree from the University of Pune, for the research he has carried out at the National Chemical Laboratory Pune. He has carried out his post-doctoral studies at the Faculty of Engineering at Ehime University, Japan during 2002-2004. In 2004, he moved to United Kingdom and worked as a research officer at the Department of Pharmacy and Pharmacology at the University of Bath for two years. In 2006, he was awarded the prestigious Alexander von Humboldt Fellowship by the German Govt.",
-    name: "Dr.Kana Sureshan",
+    description: "Prof. Kana M. Sureshan is a world-class Research Scientist at IISER Thiruvananthapuram. His research interests include the development of materials for environmental protection and healthcare. He has published about 100 research papers in highly reputed international journals and filed six patents. He has given more than 100 invited talks and plenary lectures at various international conferences worldwide. He was awarded the Innocentive award (USA) for designing the shortest and economic route for the tuberculosis drug, PA-824. In recognition of his outstanding research, he was awarded the Ramanujan fellowship by Govt of India, Swarnajayanti fellowship by Govt of India, young scientist award by YIM Boston, USA, Bhagyatara Award by Panjab University and the Technology Innovation Award for the year 2020 by the Govt. of India. He has also received the bronze medal from Chemical Research Society of India and MRSI medal from Materials Research Society of India. In 2018, he was elected as the Fellow of Royal Society of Chemistry, U. K and in 2020, he has been elected as the Fellow of Indian Academy of Sciences. He is a member of various professional organizations worldwide.",
+    name: "Prof. Kana Sureshan",
     sub_heading: "Scientist<br />IISER Trivandrum",
     meta: []
   },
