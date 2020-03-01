@@ -1,11 +1,5 @@
 let bannerTexts = [
   {
-    name: "A change to pursue life", 
-    space: [1, 8, 18],
-    red: [19, 20, 21, 22],
-    breaks: [11],
-  },
-  {
     name: "To do what's impossible",
     space: [2, 5],
     red: [13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
