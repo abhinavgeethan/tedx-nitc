@@ -27,13 +27,29 @@ let bannerTexts = [
   {
     name: "See the unseen PERSPECTIVE",
     space: [3, 7],
-    red: [18, 19, 20, 21, 22],
+    red: [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
     rotate: true,
     breaks: [14],
   },
 ];    
 
 let sequenceAnimationElem = document.querySelector(".main .sequence-animation");
+let goDowmElem = document.querySelector(" section.main .go-down");
+let animationRunning = true;
+document.addEventListener("scroll", () => {
+  let offset = window.pageYOffset;
+   
+  if (offset > 120 && animationRunning) {
+    goDowmElem.style.opacity = 0;
+    goDowmElem.style.animation = "none";
+    animationRunning = false;
+  } else if(!animationRunning) {
+    goDowmElem.style.opacity = 1;
+    sleep(500);
+    goDowmElem.style.animation = "";
+    animationRunning = true;
+  }
+})
 
 assignAnimation();
 
@@ -44,6 +60,10 @@ function sleep(ms) {
 async function assignAnimation() {
   for(let j = 0; ; j++) {
     let bannerText = bannerTexts[j%bannerTexts.length];
+    let animationDuration ="5000";
+    if (j%bannerTexts.length == bannerTexts.length -1) {
+      animationDuration = "8000";
+    }
     let currentElem = e("DIV", "", "text", sequenceAnimationElem);
     for (let i =0; i< bannerText.name.length; i++) {
       let letter;
@@ -53,20 +73,24 @@ async function assignAnimation() {
         letter = e("span", bannerText.name[i], "", currentElem);
       }
       if (bannerText.space.indexOf(i) != -1) letter.classList.add("blank");
-      if (bannerText.red.indexOf(i) != -1) {
-        letter.classList.add("make-red");
-        letter.classList.add("large");
-      }
       if (bannerText.strike && i > 8 && i < 14) letter.classList.add("strike");
-      if (bannerText.rotate && ((i > 14 && i < 18) || ((i > 22 && i < 26)))) letter.classList.add("large");
       if (bannerText.rotate && i > 17 && i < 23) {
-        letter.style.animation = "LetterTwistRotate 3.1s ease-in-out forwards";
+        letter.classList.add("large");
+        letter.style.animation =`FadeShowInverted ${animationDuration}ms ease-in-out forwards`;
+        letter.style.position = "relative";
+        letter.style.left = "-0.6%";
+      } else if (bannerText.red.indexOf(i) != -1) {
+        letter.classList.add("large");
+        if (bannerText.rotate) {
+          letter.style.animation =`FadeShow ${animationDuration}ms ease-in-out forwards`;
+        } else {
+          letter.style.animation =`FadeShowRed ${animationDuration}ms ease-in-out forwards`;
+        }
       } else {
-        letter.style.animation = "LetterTwist 3.1s ease-in-out forwards";
+        letter.style.animation =`FadeShow ${animationDuration}ms ease-in-out forwards`;
       }
     }
-    currentElem.style.animation = "FadeShow 5s ease-in-out forwards";
-    await sleep(5200);
+    await sleep(animationDuration);
     currentElem.parentElement.removeChild(currentElem);
     
   }
