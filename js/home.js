@@ -1,4 +1,106 @@
-function e(type, text, className, appendOn = -1) {
+let bannerTexts = [
+  {
+    name: "A change to pursue life", 
+    space: [1, 8, 18],
+    red: [19, 20, 21, 22],
+    breaks: [11],
+  },
+  {
+    name: "To do what's impossible",
+    space: [2, 5],
+    red: [13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
+    breaks: [12],
+  },
+  {
+    name: "To say I can't can",
+    space: [2, 6, 14],
+    strike: true,
+    red: [15, 16, 17],
+    breaks: [8],
+  },
+  {
+    name: "To take roads not taken",
+    space: [2, 7, 17],
+    red: [8, 9, 10, 11, 12],
+    breaks: [13],
+  },
+  {
+    name: "See the unseen PERSPECTIVE",
+    space: [3, 7],
+    red: [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
+    rotate: true,
+    breaks: [14],
+  },
+];    
+
+let sequenceAnimationElem = document.querySelector(".main .sequence-animation");
+let goDowmElem = document.querySelector(" section.main .go-down");
+let animationRunning = true;
+document.addEventListener("scroll", () => {
+  let offset = window.pageYOffset;
+  let fixedScrollValue = 250;
+   
+  if (offset > fixedScrollValue && animationRunning) {
+    goDowmElem.style.opacity = 0;
+    goDowmElem.style.animation = "none";
+    animationRunning = false;
+  } else if(offset <= fixedScrollValue && !animationRunning) {
+    goDowmElem.style.opacity = 1;
+    animationRunning = true;
+    sleep(500);
+    goDowmElem.style.animation = "";
+  }
+})
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    assignAnimation();
+  }, 2600);
+})
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function assignAnimation() {
+  for(let j = 0; ; j++) {
+    let bannerText = bannerTexts[j%bannerTexts.length];
+    let animationDuration ="3000";
+    if (j%bannerTexts.length == bannerTexts.length -1) {
+      animationDuration = "5000";
+    }
+    let currentElem = newElem("DIV", "", "text", sequenceAnimationElem);
+    for (let i =0; i< bannerText.name.length; i++) {
+      let letter;
+      if (bannerText.breaks.indexOf(i) != -1) {
+        letter = newElem("br"," ",  "", currentElem);
+      } else {
+        letter = newElem("span", bannerText.name[i], "", currentElem);
+      }
+      if (bannerText.space.indexOf(i) != -1) letter.classList.add("blank");
+      if (bannerText.strike && i > 8 && i < 14) letter.classList.add("strike");
+      if (bannerText.rotate && i > 17 && i < 23) {
+        letter.classList.add("large");
+        letter.style.animation =`FadeShowInverted ${animationDuration}ms ease-in-out forwards`;
+        letter.style.position = "relative";
+        letter.style.left = "-0.6%";
+      } else if (bannerText.red.indexOf(i) != -1) {
+        letter.classList.add("large");
+        if (bannerText.rotate) {
+          letter.style.animation =`FadeShow ${animationDuration}ms ease-in-out forwards`;
+        } else {
+          letter.style.animation =`FadeShowRed ${animationDuration}ms ease-in-out forwards`;
+        }
+      } else {
+        letter.style.animation =`FadeShow ${animationDuration}ms ease-in-out forwards`;
+      }
+    }
+    await sleep(animationDuration);
+    currentElem.parentElement.removeChild(currentElem);
+    
+  }
+}
+function newElem(type, text, className, appendOn = -1) {
   let el = document.createElement(type);
   el.innerHTML = text;
   (className != "")?el.classList.add(className): null;
@@ -9,27 +111,27 @@ function e(type, text, className, appendOn = -1) {
 
 function makeLecture(cardData) {
   
-  let lecture = e("DIV", "", "speaker");
+  let lecture = newElem("DIV", "", "speaker");
   
-  let mainPart = e("DIV", "", "main-part", lecture);
+  let mainPart = newElem("DIV", "", "main-part", lecture);
   
-  let dataPart = e("DIV", "", "data-part", mainPart);
-  let dottedPart = e("DIV", "", "dotted-part", mainPart);
+  let dataPart = newElem("DIV", "", "data-part", mainPart);
+  let dottedPart = newElem("DIV", "", "dotted-part", mainPart);
   
-  let allPart = e("DIV", "", "all-part", dataPart);
+  let allPart = newElem("DIV", "", "all-part", dataPart);
   
-  let imagePart = e("DIV", "", "image-part", dataPart);
+  let imagePart = newElem("DIV", "", "image-part", dataPart);
   imagePart.style.backgroundImage = `url('${cardData.image_url}')`;
-  let headPart = e("DIV", "", "head-part", allPart);
-  let otherPart = e("DIV", "", "other-part", allPart);
+  let headPart = newElem("DIV", "", "head-part", allPart);
+  let otherPart = newElem("DIV", "", "other-part", allPart);
   
-  let btn = e("DIV", "More Info", "btn", otherPart);
+  let btn = newElem("DIV", "More Info", "btn", otherPart);
   btn.addEventListener("click", function() {
     makeModal(cardData);
   });
   
-  let h2 = e("H2", cardData.name, "", headPart);
-  let subHead = e("DIV", cardData.sub_heading, "sub-head", headPart);
+  let h2 = newElem("H2", cardData.name, "", headPart);
+  let subHead = newElem("DIV", cardData.sub_heading, "sub-head", headPart);
   subHead.classList.add("make-red"); 
   
   return lecture;
@@ -37,15 +139,15 @@ function makeLecture(cardData) {
 
 
 function makeModal(cardData) {
-  let modal = e("DIV", "", "modal", document.body);
+  let modal = newElem("DIV", "", "modal", document.body);
   setTimeout( function() {
     modal.style.opacity = 1;  
   }, 10);
   
-  let content = e("DIV", "", "content", modal);
-  let box = e("DIV", "", "box", content);
+  let content = newElem("DIV", "", "content", modal);
+  let box = newElem("DIV", "", "box", content);
   
-  let closeBtn = e("DIV", "&times;", "close-btn", box);
+  let closeBtn = newElem("DIV", "&times;", "close-btn", box);
   modal.addEventListener("click", function(e) {
     if (e.target == modal) {
       modal.style.opacity = 0;
@@ -61,17 +163,17 @@ function makeModal(cardData) {
       modal.parentElement.removeChild(modal);
     }, 200);
   });
-  let dataPart = e("DIV", "", "data-part", box);
-  let imagePart = e("DIV", "", "image-part", box);
+  let dataPart = newElem("DIV", "", "data-part", box);
+  let imagePart = newElem("DIV", "", "image-part", box);
   imagePart.style.backgroundImage = `url('${cardData.image_url}')`;
   
-  let headPart = e("DIV", "", "head-part", dataPart);
-  let moreInfo = e("DIV", "", "more-info", dataPart);
-  let para = e("P", cardData.description, "", dataPart);
-  cardData.meta.forEach(elem => e("DIV", elem, "information", moreInfo));
+  let headPart = newElem("DIV", "", "head-part", dataPart);
+  let moreInfo = newElem("DIV", "", "more-info", dataPart);
+  let para = newElem("P", cardData.description, "", dataPart);
+  cardData.meta.forEach(elem => newElem("DIV", elem, "information", moreInfo));
   
-  let h2 = e("H2", cardData.name, "", headPart);
-  let subHead = e("DIV", cardData.sub_heading, "sub-head", headPart);
+  let h2 = newElem("H2", cardData.name, "", headPart);
+  let subHead = newElem("DIV", cardData.sub_heading, "sub-head", headPart);
   subHead.classList.add("make-red"); 
 
   setTimeout( function() {
@@ -156,3 +258,38 @@ let speakerData = [
 ];
 
 speakerData.forEach( spkData => document.querySelector(".speaker-list").appendChild(makeLecture(spkData)) );
+
+let countdownTimerElem = {
+  second: document.querySelector(".countdown .timer.second .value"),
+  minute: document.querySelector(".countdown .timer.minute .value"),
+  hour: document.querySelector(".countdown .timer.hour .value"),
+  day: document.querySelector(".countdown .timer.day .value")
+};
+
+let countdownTimerInterval = setInterval(() => countdownTimer("2020-03-15T09:00:00.000+05:30"), 1000);
+
+
+function countdownTimer(timestamp) {
+  let eventTime = Date.parse(timestamp);
+
+  let now = new Date().getTime(); 
+  let t = eventTime - now;
+  if (t < 0 && countdownTimerInterval) {
+    clearInterval(countdownTimerInterval);
+    return;
+  }
+  let day = Math.floor(t / (1000 * 60 * 60 * 24)); 
+  let hour = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+  let minute = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+  let second = Math.floor((t % (1000 * 60)) / 1000); 
+
+  day = (day<10)? "0" + day: day;
+  hour = (hour<10)? "0" + hour: hour;
+  minute = (minute<10)? "0" + minute: minute;
+  second = (second<10)? "0" + second: second;
+
+  countdownTimerElem.second.textContent = second;
+  countdownTimerElem.minute.textContent = minute;
+  countdownTimerElem.hour.textContent = hour;
+  countdownTimerElem.day.textContent = day;
+}
