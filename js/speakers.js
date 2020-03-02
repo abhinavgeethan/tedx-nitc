@@ -136,7 +136,7 @@ let speakerData = [
     image_url: "https://cdn.glitch.com/1db8d091-7a7f-4d80-a4fe-2ae6168bd7a9%2F1.jpg?v=1583061209157",
     description: "Puja believes that children should be at the heart of all human development work. This belief informs her passionate interest and involvement in children and their potential. Over the course of her work, Puja has been involved in the nurturing of a large number of organisations and people, enabling them to connect at the level of individual belief, to the vision of all rights, for all children.",
     name: "Puja Marwaha",
-    sub_heading: "Chief Executive at Child Right and You",
+    sub_heading: "CEO of CRY-Child Rights and You",
     meta: []
   },
   {
@@ -151,6 +151,13 @@ let speakerData = [
     description: "Thalappil Pradeep is an Institute Professor and Professor of chemistry in the Department of Chemistry at the Indian Institute of Technology Madras. In 2020, he received the Padma Shri award for his distinguished work in the field of Science and Technology. He has also received the Shanti Swarup Bhatnagar Prize for Science and Technology in 2008 by Council of Scientific and Industrial Research.",
     name: "Prof. Thalappil Pradeep",
     sub_heading: "Padma Shri Awardee<br />Professor, IIT Madras",
+    meta: []
+  },
+  {
+    image_url: "https://cdn.glitch.com/1db8d091-7a7f-4d80-a4fe-2ae6168bd7a9%2FIMG_2322_cropped-min.jpg?v=1583154641020",
+    description: "Dr. P.P.Anilkumar, Professor and Head, Department of Architecture and Planning, NIT Calicut has about 30 years of teaching and research experience in the field of Urban Planning and Architecture. He is the author of the book ‘Introduction to Smart Cities’ published by Pearson Education which is the pioneering reference on Smart Cities. He has published widely, won awards and writes popular articles on Urban Planning related topics in dailies and magazines and has travelled wide.",
+    name: "Dr. P.P.Anilkumar",
+    sub_heading: "Prof and HOD of Architecture and Planning, NIT Calicut",
     meta: []
   }
 ];
