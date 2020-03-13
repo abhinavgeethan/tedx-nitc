@@ -176,6 +176,32 @@ section .extra-section p:not(:last-child) {
   margin-bottom: 20px;
 }
 
+.message {
+  width: 700px;
+  padding: 20px 40px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 7px solid #E62B1E;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+  word-spacing: 0.08rem;;
+  font-size: 1.13rem;
+}
+
+.message p {
+  margin: 20px 0;
+}
+
+.message p.sub {
+  font-size: 1rem;
+}
+
+.message p.ps {
+  text-align: right;
+}
+
 @media only screen and (min-width: 900px) {
   section {
     margin: 60px;
