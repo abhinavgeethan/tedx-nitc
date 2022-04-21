@@ -259,7 +259,7 @@ let bannerTexts = [
     day: document.querySelector(".countdown .timer.day .value")
   };
   
-  let countdownTimerInterval = setInterval(() => countdownTimer("2020-03-15T09:00:00.000+05:30"), 1000);
+  let countdownTimerInterval = setInterval(() => countdownTimer("2022-04-30T15:00:00.000+05:30"), 1000);
   
   
   function countdownTimer(timestamp) {

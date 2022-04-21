@@ -112,12 +112,12 @@ section:first-child {
 
 section {
     margin: 10px;
-    padding: 50px 10px;
+    padding: 10px 10px;
     max-width: 100vw
 }
 
 section .sub-heading {
-    padding: 10px 0 50px 0;
+    padding: 0px 0 50px 0;
     font-size: 2.5rem;
     font-weight: 400;
     text-transform: uppercase
@@ -144,11 +144,15 @@ section.imaged-heading .sub-heading:not(.sub) {
 }
 
 section .extra-section {
-    margin-bottom: 100px;
+    margin-bottom: 3rem;
     line-height: 2.4rem;
     letter-spacing: .02rem;
     word-spacing: .08rem;
     font-size: 1.13rem
+}
+
+section .extra-section:last-of-type {
+    margin-bottom: 0;
 }
 
 section .extra-section:not(:first-of-type)::before {
@@ -158,13 +162,13 @@ section .extra-section:not(:first-of-type)::before {
     height: 5px;
     max-width: 300px;
     width: 40%;
-    top: -40px;
+    /* top: -40px; */
     margin-bottom: 80px;
     background-color: #e62b1e
 }
 
 section .sub.sub-heading {
-    padding: 10px 0 50px 0;
+    padding: 0px 0 50px 0;
     font-size: 2.2rem;
     font-weight: 400
 }
@@ -176,7 +180,7 @@ section .extra-section p:not(:last-child) {
 @media only screen and (min-width:900px) {
     section {
         margin: 60px;
-        padding: 50px 10%
+        padding: 10px 10%
     }
     section.imaged-heading .sub-heading:not(.sub) {
         margin-left: calc(-60px - 10vw);
@@ -195,7 +199,7 @@ section .extra-section p:not(:last-child) {
 .speaker-container .speaker-list .speaker {
     width: 300px;
     min-width: 250px;
-    margin: 50px 60px
+    margin: 20px 20px
 }
 
 .speaker-container .speaker-list .speaker .main-part {
@@ -515,7 +519,7 @@ section .extra-section p:not(:last-child) {
     background: #000 url('https://cdn.glitch.com/1db8d091-7a7f-4d80-a4fe-2ae6168bd7a9%2Fhao-wang-pVq6YhmDPtk-unsplash-min%20(2).jpg?v=1583079119955') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
-    padding: 150px 0
+    padding: 50px 0
 }
 
 .location .info-container {
@@ -599,8 +603,8 @@ section .extra-section p:not(:last-child) {
     font-weight: 700;
     font-size: 4rem;
     color: #e62b1e;
-    -webkit-text-stroke: 1px #000;
-    text-shadow: 3px 3px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff
+    -webkit-text-stroke: 1px rgba(255,255,255,0.8);
+    /* text-shadow: 1px 1px 0 #fff, -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -0.5px 0.5px 0 #fff, 0.5px 0.5px 0 #fff */
 }
 
 .countdown .timer-group .timer .label {
@@ -1060,7 +1064,8 @@ footer .link:hover {
     background-color: #090909;
     color: #aaa;
     text-align: center;
-    padding: 15px 0
+    padding: 15px 0;
+    font-size: 0.75rem;
 }
 
 @media screen and (min-width:900px) {
@@ -1096,7 +1101,14 @@ section.contact-section .contact-list .contact:hover {
 section.contact-section .contact-list .contact .picture {
     padding: 0 40px 0 20px;
     display: flex;
-    align-items: center
+    align-items: center;
+}
+section.contact-section .contact-list .contact .picture > img{
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    border: solid black 3px;
+    filter: grayscale();
 }
 
 section.contact-section .contact-list .contact .picture svg {

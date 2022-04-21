@@ -2,7 +2,7 @@
   background: #000000 url('https://cdn.glitch.com/1db8d091-7a7f-4d80-a4fe-2ae6168bd7a9%2Flocationbg-min.jpg?v=1583155437206') no-repeat center;
   background-size: cover;
   background-attachment: fixed;
-  padding: 150px 0;
+  padding: 100px 0;
 }
 
 .location .info-container {
@@ -16,7 +16,7 @@
   background-color: #090909;
   min-width: 280px;
   height: 120px;
-  margin: 20px 20px;
+  margin: 10px 10px;
   line-height: 1.8rem;
   transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
   text-decoration: none;
