@@ -200,13 +200,6 @@ let bannerTexts = [
       meta: []
     },
     {
-      image_url: "https://images.yourstory.com/cs/images/people/Abid-1595231203707.jpg",
-      description: "",
-      name: "Abid Hassan",
-      sub_heading: "Stocks / Financial Independence",
-      meta: []
-    },
-    {
       image_url: "https://cdn.glitch.com/1db8d091-7a7f-4d80-a4fe-2ae6168bd7a9%2F5.jpg?v=1583061219527",
       description: "",
       name: "Gautham J",
