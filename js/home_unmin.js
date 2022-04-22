@@ -193,7 +193,7 @@ let bannerTexts = [
       meta: []
     },
     {
-      image_url: "https://scontent-tir2-1.xx.fbcdn.net/v/t39.30808-6/273377949_10216944518004301_505898490058897486_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=sQF3JIdeKMwAX9HJbV3&_nc_ht=scontent-tir2-1.xx&oh=00_AT_984qgubGxh6LdlaR2x-eXkALEmu-4xa7frJchOPEknQ&oe=6264B7AF",
+      image_url: "assets/speakerImages/zakaria.jpg",
       description: "Lorem Ipsum Dolor",
       name: "Zakaria Joy",
       sub_heading: "Environmental Consultant<br />University of Northhampton",
