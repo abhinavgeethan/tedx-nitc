@@ -202,8 +202,8 @@ let bannerTexts = [
     {
       image_url: "https://cdn.glitch.com/1db8d091-7a7f-4d80-a4fe-2ae6168bd7a9%2F5.jpg?v=1583061219527",
       description: "",
-      name: "Gautham J",
-      sub_heading: "Crypto <br /> Polkadot",
+      name: "Agrim Prakash",
+      sub_heading: "Digital Storyteller | Entreprenuer <br /> IdiotBox Media",
       meta: []
     },
     {

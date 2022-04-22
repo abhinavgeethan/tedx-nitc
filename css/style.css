@@ -1120,6 +1120,10 @@ section.contact-section .contact-list .contact:hover .picture svg {
     fill: #fff
 }
 
+section.contact-section .contact-list .contact:hover .picture >img {
+    filter:none;
+}
+
 section.contact-section .contact-list .contact .data .name {
     font-size: 1.5rem
 }
