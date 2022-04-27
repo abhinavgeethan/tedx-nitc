@@ -24,13 +24,13 @@ let bannerTexts = [
       red: [8, 9, 10, 11, 12],
       breaks: [13],
     },
-    {
-      name: "See the unseen PERSPECTIVE",
-      space: [3, 7],
-      red: [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
-      rotate: true,
-      breaks: [14],
-    },
+    // {
+    //   name: "See the unseen PERSPECTIVE",
+    //   space: [3, 7],
+    //   red: [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
+    //   rotate: true,
+    //   breaks: [14],
+    // },
   ];    
   
   let sequenceAnimationElem = document.querySelector(".main .sequence-animation");
@@ -250,7 +250,7 @@ let bannerTexts = [
     // }
   ];
   
-  speakerData.forEach( spkData => document.querySelector(".speaker-list").appendChild(makeLecture(spkData)) );
+  // speakerData.forEach( spkData => document.querySelector(".speaker-list").appendChild(makeLecture(spkData)) );
   
   let countdownTimerElem = {
     second: document.querySelector(".countdown .timer.second .value"),
