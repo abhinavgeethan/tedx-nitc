@@ -186,38 +186,38 @@ let bannerTexts = [
   
   let speakerData = [
     {
-      image_url: "https://cdn.glitch.com/1db8d091-7a7f-4d80-a4fe-2ae6168bd7a9%2F2.jpg?v=1583061219652",
-      description: "Lorem",
-      name: "Anjana",
-      sub_heading: "Artificial Intelligence",
+      image_url: "assets/speakerImages/Anjana.jpg",
+      description: "Ever inquisitive about AI and the future of our work culture, Anjana is an Organisational Psychologist with a PhD from IIM Bangalore. She joins us at TEDxNITC to explore human dimensions and the future of the workplace - and with over 15 years of experience in management consulting and financial strategy planning, we’re excited to catch a glimpse of her insights.",
+      name: "Anjana Kaumathil",
+      sub_heading: "Organisational Psychologist | Artificial Intelligence",
       meta: []
     },
     {
       image_url: "assets/speakerImages/zakaria.jpg",
-      description: "Lorem Ipsum Dolor",
+      description: "Turning dirt into diamonds, Zakaria Joy is an Environmental Consultant with a Masters in Waste Management. The founder and CEO of a pioneering eco-solutions company, he was recently nominated for the ‘Game Changers Award of Kerala’ for his work with radical resolutions like the Mahi Model. Let's take a walk down his journey of entrepreneurship and innovation.",
       name: "Zakaria Joy",
       sub_heading: "Environmental Consultant<br />University of Northhampton",
       meta: []
     },
     {
-      image_url: "https://cdn.glitch.com/1db8d091-7a7f-4d80-a4fe-2ae6168bd7a9%2F5.jpg?v=1583061219527",
-      description: "",
+      image_url: "assets/speakerImages/Agrim.jpg",
+      description: "Be it helping a billion-dollar fashion e-commerce brand in Bangkok build its footing in south-east Asia, or working as a sports commentator for Star Sports, reaching over 100,000 Indians across the globe daily through engaging Instagram and YouTube content, Agrim does it all. Powered by his love for story-telling, he joins our TEDxNITC stage to share his passion.",
       name: "Agrim Prakash",
       sub_heading: "Digital Storyteller | Entreprenuer <br /> IdiotBox Media",
       meta: []
     },
     {
-      image_url: "https://cdn.glitch.com/1db8d091-7a7f-4d80-a4fe-2ae6168bd7a9%2F4.jpg?v=1583061218587",
-      description: "",
-      name: "Seema Anand",
-      sub_heading: "",
+      image_url: "assets/speakerImages/Aaquib.jpg",
+      description: "Jumping from engineering to management to finally finding his place at NIFT, Aaquib found his calling in fashion. With a focus on sustainable fashion, Aaquibs start-ups created ripples in the industry with his up-starter, DeGraphic Factory - a custom fashion label. Now a Senior Marketing Manager at the brand, the unfolding of his story is one to witness.",
+      name: "Aaquib Saneen",
+      sub_heading: "Sustainable Fashion <br/> DeGraphic Factory",
       meta: []
     },
     {
-      image_url: "https://cdn.glitch.com/1db8d091-7a7f-4d80-a4fe-2ae6168bd7a9%2F10.jpg?v=1583061221037",
-      description: "",
-      name: "Leeza Mangaldas",
-      sub_heading: "",
+      image_url: "assets/speakerImages/Siddharth.jpg",
+      description: "An Economic and Urban Geographer by trade, Siddharth is a PhD researcher at the University of Wisconsin-Madison, USA. Well recognised in his field, he has been awarded the Tarknath Das memorial Fellowship as well as the IIAS Junior Fellowship for his work. Apart from adventuring across the western coast of India and dabbling across cultures, he also specialises in International Development Studies, Urban Studies and Global Environmental Issues.",
+      name: "Siddharth Menon",
+      sub_heading: "Economic and Urban Geographer",
       meta: []
     },
     // {
@@ -250,7 +250,7 @@ let bannerTexts = [
     // }
   ];
   
-  // speakerData.forEach( spkData => document.querySelector(".speaker-list").appendChild(makeLecture(spkData)) );
+  speakerData.forEach( spkData => document.querySelector(".speaker-list").appendChild(makeLecture(spkData)) );
   
   let countdownTimerElem = {
     second: document.querySelector(".countdown .timer.second .value"),
