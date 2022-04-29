@@ -188,7 +188,7 @@ let bannerTexts = [
     {
       image_url: "assets/speakerImages/Anjana.jpg",
       description: "Ever inquisitive about AI and the future of our work culture, Anjana is an Organisational Psychologist with a PhD from IIM Bangalore. She joins us at TEDxNITC to explore human dimensions and the future of the workplace - and with over 15 years of experience in management consulting and financial strategy planning, we’re excited to catch a glimpse of her insights.",
-      name: "Anjana Kaumathil",
+      name: "Anjana Karumathil",
       sub_heading: "Organisational Psychologist | Artificial Intelligence",
       meta: []
     },
